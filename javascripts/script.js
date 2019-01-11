@@ -6,6 +6,6 @@ $(document).ready(function() {
   for (i=0; i<size; i++)  {
 		url = "https://raw.githubusercontent.com/JEFF-BRIDGES99/JEFF-BRIDGES99.github.io/master/img/" + Math.floor(Math.random()*images.length) + ".png"
     console.log(url);
-		$('.container').append("<a><img src=" + url + "></img></a>")
+		$('.container').append("<span><a><img src=" + url + "></img></a></span>")
   } 
 });
