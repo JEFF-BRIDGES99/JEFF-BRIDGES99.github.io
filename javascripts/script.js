@@ -10,7 +10,7 @@ $(document).ready(function() {
   } 
 });
 
-    $().ready(function(){
+    $(document).ready(function(){
         $.getJSON("/list.json", function( data ) {
         console.log(data[1]);
       });
