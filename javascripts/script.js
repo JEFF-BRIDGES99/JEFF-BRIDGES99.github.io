@@ -10,21 +10,9 @@ $(document).ready(function() {
   } 
 });
 
-
-
-var filenames=[], foldernames=[];
-
-$.get("../img/",function(response){
-    document.write(response);
-    getNames();
-});
-
-function getNames()
-{
-    var files = document.querySelectorAll("a.icon.file");
-    var folders = document.querySelectorAll("a.icon.dir");
-    files.forEach(function(item){filenames.push(item.textContent)})
-    folders.forEach(function(item){foldernames.push(item.textContent.slice(0,-1))})
-    console.log(filenames);
-    console.log(foldernames);
-}
+    $().ready(function(){
+        $.getJSON("/data.json", function( data ) {
+        console.log(data);
+        $("#text").html(data["text"]);
+      });
+    });
